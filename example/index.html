@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>React Text Split Example</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      font-weight: 100;
+      background: #aadfeb;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 155px;
+    }
+
+    .example-part.whitespace {
+      background: none !important;
+    }
+
+    .example-part {
+      padding: 10px;
+      font-size: 60px;
+      display: inline-block;
+      background: #ffb500;
+      color: #fff;
+    }
+
+    .example-part.whitespace {
+      height: 100%;
+    }
+
+    .example-part:nth-child(odd) {
+      moz-transform: skewY(-10deg);
+      -webkit-transform: skewY(-10deg);
+      -o-transform: skewY(-10deg);
+      -ms-transform: skewY(-10deg);
+      transform: skewY(-10deg);
+    }
+
+    .example-part:nth-child(even) {
+      background: #f15b14;
+      color: #fff;
+      moz-transform: skewY(10deg);
+      -webkit-transform: skewY(10deg);
+      -o-transform: skewY(10deg);
+      -ms-transform: skewY(10deg);
+      transform: skewY(10deg);
+    }
+  </style>
+</head>
+<body>
+  <h1 id="example"></h1>
+  <h1 id="example2"></h1>
+  <h1 id="example3"></h1>
+  <h1 id="example4"></h1>
+  <script src="./../node_modules/react/dist/react-with-addons.min.js" type="text/javascript"></script>
+  <script src="./../dist/ReactTextSplit.min.js" type="text/javascript"></script>
+  <script src="example.js" type="text/javascript"></script>
+</body>
+</html>
