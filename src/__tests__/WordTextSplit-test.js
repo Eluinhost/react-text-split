@@ -10,7 +10,7 @@ var TestUtils = React.addons.TestUtils;
 describe('WordTextSplit', () => {
   it('splits at whitespace', () => {
     var text = TestUtils.renderIntoDocument(<WordTextSplit text={' some words separated  by\t differing whitespace'} />);
-    var parts = [' ', 'some', ' ', 'words', ' ', 'separated', '  ', 'by', '\t ', 'differing', ' ', 'whitespace'];
+    var parts = ['\u00A0', 'some', '\u00A0', 'words', '\u00A0', 'separated', '\u00A0\u00A0', 'by', '\t\u00A0', 'differing', '\u00A0', 'whitespace'];
 
     var base = TestUtils.findRenderedDOMComponentWithClass(text, 'text-split-base');
     expect(base.props.children.length).toEqual(parts.length);

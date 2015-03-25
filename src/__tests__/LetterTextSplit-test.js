@@ -10,7 +10,7 @@ var TestUtils = React.addons.TestUtils;
 describe('LetterTextSplit', () => {
   it('splits at char', () => {
     var text = TestUtils.renderIntoDocument(<LetterTextSplit text={'a b\t c d '} />);
-    var parts = ['a', ' ', 'b', '\t', ' ', 'c', ' ', 'd', ' '];
+    var parts = ['a', '\u00A0', 'b', '\t', '\u00A0', 'c', '\u00A0', 'd', '\u00A0'];
 
     var base = TestUtils.findRenderedDOMComponentWithClass(text, 'text-split-base');
     expect(base.props.children.length).toEqual(parts.length);

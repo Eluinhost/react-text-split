@@ -9,7 +9,7 @@ var TestUtils = React.addons.TestUtils;
 describe('TextSplit', () => {
   it('doesn\'t split words', () => {
     var text = TestUtils.renderIntoDocument(<TextSplit text={' some words separated  by\t differing whitespace'} />);
-    var parts = [' some words separated  by\t differing whitespace'];
+    var parts = ['\u00A0some\u00A0words\u00A0separated\u00A0\u00A0by\t\u00A0differing\u00A0whitespace'];
 
     var base = TestUtils.findRenderedDOMComponentWithClass(text, 'text-split-base');
     expect(base.props.children.length).toEqual(1);

@@ -26,6 +26,9 @@ class TextSplit extends React.Component {
       classString += ` whitespace ${this.props.classBase}-whitespace`;
     }
 
+    // replace spaces
+    text = text.replace(/ /g, '\u00A0');
+
     return <span aria-hidden className={classString} key={index}>{text}</span>;
   }
 
