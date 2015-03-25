@@ -1,0 +1,42 @@
+{
+  "name": "react-text-split",
+  "version": "0.0.0",
+  "main": "dist/ReactTextSplit.js",
+  "tags": [
+    "react-component",
+    "split",
+    "span",
+    "text"
+  ],
+  "scripts": {
+    "build": "npm run test && gulp regular && gulp min",
+    "test": "npm run-script jscs && jest",
+    "jscs": "jscs ./src",
+    "prepublish": "npm run build"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "babel-core": "^4.7.6",
+    "babel-loader": "^4.2.0",
+    "esprima-fb": "^13001.1001.0-dev-harmony-fb",
+    "gulp": "^3.8.11",
+    "gulp-webpack-build": "^0.6.0",
+    "jest-cli": "^0.4.0",
+    "jscs": "jscs-dev/node-jscs#d6fcbc48ab4b09bd1f966a4b9495cd6bf2f9631e",
+    "jscs-loader": "0.0.5",
+    "react": "0.13.*",
+    "webpack": "^1.7.3"
+  },
+  "peerDependencies": {
+    "react": "0.13.*"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/test-preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "react",
+      "react/addons"
+    ]
+  }
+}
