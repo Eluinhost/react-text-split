@@ -111,6 +111,24 @@ e.g. `'some text' => 's', 'o', 'm', 'e', '&nbsp;', 't', 'e', 'x', 't'`
 Puts the entire string in a single element, used as a superclass for WordTextSplit and LetterTextSplit and custom
 components
 
+### RotateTextSplit
+
+This is a wrapper around any other kind of TextSplit element that rotates the text shown from an array on a timer (2000ms).
+
+It takes the following props:
+
+`values` - an array of text values, only 1 string will be shown at a time
+`type` - a React component to pass the text and classBase to
+`classBase` - passed to the TextSplit element
+
+Example:
+
+```javascript
+<ReactTextSplit.RotateTextSplit text={['some random', 'text strings', 'to rotate']} type={ReactTextSplit.WordTextSplit} />
+```
+
+Will render `['some', ' ', 'random']` then `['text', ' ', 'strings']` and finally `['to', ' ', 'rotate']` before starting again
+
 ## Customization
 
 You can create your own splits by extending the TextSplit component and overriding the splitText function:
