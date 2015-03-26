@@ -1,6 +1,5 @@
 'use strict';
 
-import React from 'react';
 import TextSplit from './TextSplit';
 
 const WHITESPACE_SPLIT_REGEX = /(\s+)/;
